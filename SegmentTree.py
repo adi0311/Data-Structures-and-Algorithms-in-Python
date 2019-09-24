@@ -56,7 +56,7 @@ if __name__ == '__main__':
     print(st.arr)
 
     #To print the sum of numbers between index 3 and 5.
-    print(st.rangeQuery(1, 1, 5, 3, 5))
+    print(st.rangeQuery(1, baseindex, endindex, 3, 5))
 
     #Updating 3rd element of the array to 10.
     updateindex = 3
@@ -64,4 +64,4 @@ if __name__ == '__main__':
     st.update(1, updatevalue, l[updateindex-1], updateindex, baseindex, endindex)
 
     #To print the sum of numbers between index 3 and 5 after updation
-    print(st.rangeQuery(1, 1, 5, 3, 5))
+    print(st.rangeQuery(1, baseindex, endindex, 3, 5))
