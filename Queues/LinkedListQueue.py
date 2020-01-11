@@ -1,4 +1,4 @@
-class queue:
+class LinkedListQueue:
     class _Node(object):
         __slots__ = '_data', '_next'
 
