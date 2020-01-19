@@ -18,9 +18,9 @@ class Graph:
         i = source
         q = deque()
         q.append(source)
-        l = [0]*self._vertices
+        l = [0] * self._vertices
         l[i] = 1
-        print(i, end= '->')
+        print(i, end='->')
         while q:
             i = q.popleft()
             for j in range(self._vertices):
