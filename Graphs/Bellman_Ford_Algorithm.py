@@ -13,7 +13,6 @@
     [0, 3, -9, -14, -7, -6]
 """
 
-
 """
     BellFord is one of the SSSP(Single Source Shortest Path) Algorithms.
     Its complexity is much worse than Dijkstra Algorithm - O(VE).
@@ -40,17 +39,17 @@ class Graph:
     def bellman_ford(self, source):
         dist = [maxsize for i in range(self.vertices)]
         dist[source] = 0
-        for _ in range(self.vertices-1):
+        for _ in range(self.vertices - 1):
             for i in self.adjmat.keys():
                 for j in self.adjmat[i].keys():
-                    dist[j] = min(dist[j], dist[i]+self.adjmat[i][j])
+                    dist[j] = min(dist[j], dist[i] + self.adjmat[i][j])
         # Checking for the negative cycles
-        for _ in range(self.vertices-1):
+        for _ in range(self.vertices - 1):
             for i in self.adjmat.keys():
                 for j in self.adjmat[i].keys():
                     # If a better answer exists for a node than it is in negative cycle
                     # or is being affected by some negative cycle.
-                    if dist[j] > dist[i]+self.adjmat[i][j]:
+                    if dist[j] > dist[i] + self.adjmat[i][j]:
                         dist[j] = -maxsize
         return dist
 

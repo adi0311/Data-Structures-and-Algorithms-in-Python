@@ -59,7 +59,7 @@ class BinaryTree:
         return max(self.diameter_n_square(root.left),
                    self.diameter_n_square(root.right),
                    self.height(root.left) + self.height(root.right) + 1
-                )
+                   )
 
     def diameter_in_n(self, root, height):
         if not root:

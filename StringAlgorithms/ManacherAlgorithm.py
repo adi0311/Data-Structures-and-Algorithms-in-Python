@@ -55,6 +55,7 @@ def manacher_algorithm(s):
         if i + L[i] > r:
             mirror = i
             r = i + L[i]
+    print(L)
     return longest_palindromic_substring(temp, L, n)
 
 
