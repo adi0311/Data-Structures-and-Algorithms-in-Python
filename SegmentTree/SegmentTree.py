@@ -23,10 +23,10 @@ class SegmentTree:
 
     def rangeQuery(self, node, start, end, l, r):
         # When start and end index of the given node lies between the query range[l, r].
-        if (l <= start and r >= end):
+        if l <= start and r >= end:
             return self.arr[node]
         # When the start and end index of the given node lies completely outside of the query range[l, r].
-        if (end < l or start > r):
+        if end < l or start > r:
             return 0
         # In case of overlapping of the regions of the start and end index of node and query range[l, r].
         mid = (start + end) // 2

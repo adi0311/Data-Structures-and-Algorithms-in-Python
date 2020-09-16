@@ -1,3 +1,6 @@
+# In this implementation I will assume 1 based indexing
+# The implementation for 0 based index is commented
+
 from collections import defaultdict as dd
 
 
@@ -5,6 +8,7 @@ def update(index, value):
     while index <= n:
         fenwick[index] += value
         index += index & -index
+        # index |= index + 1, for 0 based index
 
 
 def query(index):
@@ -12,6 +16,7 @@ def query(index):
     while index:
         answer += fenwick[index]
         index -= index & -index
+        # index = (index & (index + 1)) - 1, for 0 based index
     return answer
 
 
