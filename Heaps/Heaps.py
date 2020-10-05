@@ -47,9 +47,9 @@ class Heaps:
             self.heapify(largest)
 
     def extract_max(self):
-        if(self._size == 0):
+        if self._size == 0:
             raise IndexError
-        if(self._size == 1):
+        if self._size == 1:
             self._size -= 1
             return self._data[0]
         root = self._data[0]
@@ -57,6 +57,7 @@ class Heaps:
         self._data[self._size-1] = -1
         self._size -= 1
         self.heapify(0)
+        return root
 
     def decrease_key(self, i, value):
         self._data[i] = value
