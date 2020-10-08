@@ -3,6 +3,16 @@ A big thanks to all the contributors to make such amazing contributions. :tada::
 # Contributor's Guide
 When contributing to this repository, please first discuss the change you wish to make via issue with the owners of this repository before making a change.
 
+- ```Fork the repository you wish to work on.```
+
+- ```Clone the repository.```
+
+- ```Make changes or add file to the repository.```
+
+- ```Create a pull request with necessary details and a proper title.```
+
+- ```Maintainers will check all the pull request and merge it if it suits the project.```
+
 # Code of Conduct
 By participating in this project, all the contributors and managers are expected to follow Standards.
 
